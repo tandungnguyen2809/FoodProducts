@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using WebMVC.Models;
 
 namespace WebMVC.Services
-{   //Tan Dung Nguyen
+{  
     public class FoodProductService
     {
         private readonly HttpClient _client;
