@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FoodProduct>
+
+@if (Model != null && Model.Any())
+{
+    foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.ProductName</td>
+            <td>@product.Category</td>
+            <td>@product.Price</td>
+            <td>@product.Description</td>
+            <td>
+                <button class="btn btn-warning" onclick="editProduct(@product.ProductId)">Edit</button>
+                <button class="btn btn-danger" onclick="deleteProduct(@product.ProductId)">Delete</button>
+            </td>
+        </tr>
+    }
+}
+else
+{
+    <tr>
+        <td colspan="5" class="text-center">No products available</td>
+    </tr>
+}
